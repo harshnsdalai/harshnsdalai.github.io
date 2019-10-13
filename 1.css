@@ -1,0 +1,111 @@
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+    background-color: #EEEEEE;
+}
+
+header {
+    height: 100vh;
+    background-color: #252525;
+    color: #F5F5F5;
+}
+
+header > div {
+    max-width: 650px;
+    padding-top: 35vh;
+    margin: 0 auto;
+}
+
+.introduction {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0.7px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.line-number {
+    width: 14px;
+    margin-right: 1.5rem;
+    opacity: 0.33;
+    user-select: none;
+}
+
+.line-content,
+.line-content mark {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 4px;
+    opacity: 85%;
+}
+
+.line-content mark {
+    letter-spacing: 6px;
+}
+
+.empty-line {
+    background: linear-gradient(to bottom, #252423, #252525);
+}
+
+.empty-line .line-number {
+    display: block;
+}
+
+.empty-line .line-number-a {
+    opacity: 0.15;
+}
+
+.empty-line .line-number-b {
+    opacity: 0.1;
+}
+
+art {
+    background: transparent;
+    color: rgba(252, 41, 74, 0.99);
+}
+
+.title-section {
+    margin: 0.5em 0;
+}
+
+.link {
+    position: absolute;
+    letter-spacing: 9px;
+    right: 4.8%;
+}
+.link-work {
+    top: 12.1%;
+}
+
+.link-contact-me{
+    top: 17.1%;
+}
+
+.link-resume{
+    position: absolute;
+    letter-spacing: 9px;
+    right: 4.8%;
+    top: 22.1%;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(252, 41, 74, 0.99);
+    text-decoration: none;
+}
