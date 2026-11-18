@@ -1,50 +1,237 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="1.css">
-    <title>Portfolio</title>
-  </head>
-  <body>
- 
-
-    <div>
-
-
-            <header>
-                    <a href="#" class="link link-work" data-scroll="work"><i class="fas fa-briefcase"></i> Work</a>
-                    <a href="#" class="link link-contact-me" data-scroll="contact-me"><i class="fas fa-id-card"></i> Contact </a>
-                    <a href="resume.pdf" class="link-resume" target="__blank"><i class="fas fa-file-pdf"></i> Resume</a>
-                    <div class="introduction">
-                        <div class="line">
-                            <span class="line-number"><h1>1</h1></span>
-                            <span class="line-content"><h1>Hello, world!</h1></span>
-                        </div>
-                        <div class="line">
-                            <span class="line-number"><h1>2</h1></span>
-                            <span class="line-content"><h1>I'm <art>Harsh Dalai</art></h1></span>
-                        </div>
-                        <div class="line">
-                            <span class="line-number"><h1>3</h1></span>
-                            <span class="line-content"><h1>an <art> Engineer</art></h1></span>
-                        </div>
-                        <div class="empty-line">
-                            <div class="line-number line-number-a"><h1>4</h1></div>
-                            <div class="line-number line-number-b"><h1>5</h1></div>
-                        </div>
-                    </div>
-                </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d19">
+  <meta name="description" content="Harsh Dalai is a software engineer at Microsoft building reliable cloud platforms, backend services and distributed systems. Explore his work and experience.">
+  <meta property="og:title" content="Harsh Dalai — Software Engineer">
+  <meta property="og:description" content="Building reliable systems at scale. Backend engineering, cloud infrastructure and distributed systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harshnsdalai.github.io/">
+  <title>Harsh Dalai | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#080d19;--panel:#10192b;--line:#263249;--text:#eef4ff;--muted:#98a9c1;--violet:#ad93ff;--cyan:#73e1ed;--green:#65e4aa;--shadow:0 24px 80px #03071188}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+    body:before{content:"";position:absolute;inset:0 0 auto;height:830px;pointer-events:none;background:radial-gradient(ellipse 50% 52% at 75% 15%,#5146a535,transparent 70%),radial-gradient(ellipse 45% 50% at 15% 35%,#166c8330,transparent 80%)}
+    a{color:inherit;text-decoration:none}button{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}
+    a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
+    .wrap{width:min(1120px,calc(100% - 44px));margin:0 auto;position:relative}
+    .nav{position:sticky;top:0;z-index:30;background:#080d19d9;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font:700 26px "Space Grotesk",sans-serif;letter-spacing:-1.5px}.logo span,.gradient{background:linear-gradient(110deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .links{display:flex;align-items:center;gap:30px;font-size:14px;color:#b8c5d8}.links a:hover,.footer a:hover{color:var(--cyan)}
+    .nav-cta{border:1px solid #566083;padding:9px 17px;border-radius:12px;font-weight:600;color:var(--text)!important}
+    .hero{min-height:680px;padding:119px 0 98px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(320px,.8fr);gap:40px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#bbcae0;border:1px solid #37465f;background:#122034b3;padding:6px 13px;border-radius:30px;font-size:13px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 13px var(--green)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.045em;line-height:1.12}
+    h1{font-size:clamp(46px,6.7vw,80px);margin:24px 0 25px;font-weight:700}
+    h1 em{font-style:normal;display:block}
+    .lead{max-width:610px;font-size:18px;line-height:1.75;color:var(--muted);margin-bottom:31px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid #52617d;padding:13px 20px;border-radius:13px;font-size:14px;font-weight:700;transition:transform .2s,background .2s;cursor:pointer;color:var(--text);background:#121d31}
+    .btn:hover{transform:translateY(-3px);background:#253456}
+    .btn.primary{background:linear-gradient(105deg,#7967e5,#6654bd);border-color:#a89cf5;color:white;box-shadow:0 12px 32px #7564dc30}
+    .hero-side{position:relative;min-width:0}.terminal{background:#0d1727;border:1px solid #405170;border-radius:20px;box-shadow:var(--shadow);overflow:hidden;transform:rotate(2deg)}
+    .terminal-head{display:flex;align-items:center;gap:7px;padding:15px 18px;background:#152137;border-bottom:1px solid #2d3a55}
+    .lamp{width:10px;height:10px;border-radius:50%;background:#ff6e79}.lamp:nth-child(2){background:#ffc467}.lamp:nth-child(3){background:#5bd49a}
+    .terminal-head small{margin:auto;color:#899bb9;font:12px "Space Grotesk",monospace}
+    .terminal-body{padding:25px 23px 30px;font:14px/2.2 ui-monospace,SFMono-Regular,Consolas,monospace;word-break:break-word}
+    .prompt{color:var(--cyan)}.cmd{color:#e6edff}.answer{color:#a0b0c9}.value{color:#a5e5bc}.cursor{display:inline-block;width:8px;height:15px;background:var(--violet);vertical-align:middle;animation:blink 1.1s steps(2) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:4px}
+    .stat,.card{border:1px solid var(--line);background:linear-gradient(145deg,#141f33,#0e1728);border-radius:18px}
+    .stat{padding:22px 25px}.stat strong{display:block;font:700 30px "Space Grotesk",sans-serif;color:#e9edff}.stat span{font-size:13px;color:var(--muted)}
+    section{padding:110px 0 0}.section-kicker{text-transform:uppercase;font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--cyan);margin-bottom:14px}
+    h2{font-size:clamp(34px,4vw,49px);margin-bottom:17px}.section-intro{color:var(--muted);max-width:690px;margin-bottom:34px}
+    .experience{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .card{padding:30px;transition:border-color .2s,transform .2s}.card:hover{border-color:#62759f;transform:translateY(-3px)}
+    .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.pill{font-size:11px;border:1px solid #455673;background:#1c2c46;border-radius:50px;color:#b8c9e6;padding:5px 10px;white-space:nowrap}
+    .card h3{font-size:24px;margin:12px 0 7px}.company{color:var(--violet);font-weight:700}.date{color:#8296b1;font-size:13px;margin-bottom:15px}
+    .card p{color:var(--muted);font-size:15px;margin-bottom:0}
+    .achievements{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .achievement{min-height:250px;display:flex;flex-direction:column;justify-content:space-between}.achievement .number{font:700 34px "Space Grotesk",sans-serif;color:var(--cyan)}.achievement h3{font-size:20px}.achievement p{font-size:14px}
+    .iconbox{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#243655;color:var(--cyan);font-size:22px}
+    .architecture{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .diagram{padding:34px 22px;text-align:center;position:relative;overflow:hidden}
+    .diagram:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,#424b9b22,transparent 65%);pointer-events:none}
+    .node{position:relative;display:inline-block;background:#1c2942;border:1px solid #647bb0;border-radius:12px;padding:12px 22px;font:600 13px "Space Grotesk",sans-serif}
+    .node.big{background:#292b57;border-color:var(--violet);color:#e3dbff}.connector{height:38px;width:1px;background:linear-gradient(var(--violet),var(--cyan));margin:0 auto;position:relative}
+    .connector:after{content:"";position:absolute;bottom:0;left:-3px;width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan);animation:pulse 2s infinite}
+    @keyframes pulse{50%{opacity:.35;transform:scale(1.5)}}
+    .nodes{display:flex;gap:8px;justify-content:center}.nodes .node{padding:10px 12px}.diagram .note{font-size:11px;color:#849bbd;margin-top:19px}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.chip{border:1px solid #3d4f6e;background:#16243a;border-radius:9px;padding:8px 12px;color:#c5d1e4;font-size:13px}
+    .guide{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .chat{padding:0;overflow:hidden}.chat-title{padding:17px 21px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center;font-weight:700;font-size:14px}.chat-title small{display:block;font-weight:400;color:var(--muted);font-size:11px}
+    .chat-log{height:290px;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px}
+    .bubble{max-width:91%;padding:12px 14px;border:1px solid #344965;border-radius:13px;background:#19273d;font-size:13px;color:#d3ddef;white-space:pre-wrap}
+    .bubble.user{align-self:flex-end;background:#433c78;border-color:#6459a3;color:#fff}.bubble.bot{align-self:flex-start}
+    .suggestions{display:flex;gap:7px;flex-wrap:wrap;padding:0 17px 13px}.suggestions button{background:#1c2b43;color:#bcd4ee;border:1px solid #334b6f;border-radius:30px;padding:5px 9px;font-size:11px;cursor:pointer}
+    .chat-form{display:flex;gap:9px;padding:14px 17px;border-top:1px solid var(--line)}
+    .chat-form input{min-width:0;flex:1;background:#0b1425;border:1px solid #3a4b67;border-radius:9px;color:#f0f5ff;padding:11px 12px;font:13px "DM Sans",sans-serif}
+    .chat-form button{border:0;border-radius:9px;padding:9px 15px;background:#8070df;color:#fff;font-weight:700;cursor:pointer}
+    .caption{font-size:12px;color:#8294ae;margin-top:10px}
+    .contact{text-align:center;padding:65px 28px;background:radial-gradient(ellipse at 50% 0,#4739754a,transparent 75%),linear-gradient(145deg,#151e36,#0e1727);border:1px solid #3d4e6b;border-radius:26px;margin:110px auto 0}
+    .contact p{color:var(--muted);max-width:570px;margin:0 auto 27px}
+    .contact .actions{justify-content:center}
+    .footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:42px 0;color:#8296b1;font-size:13px}.footer-links{display:flex;gap:20px}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:830px){.hero{grid-template-columns:1fr;padding-top:76px;gap:65px}.hero-side{max-width:520px;width:100%;margin:0 auto}.experience,.architecture,.guide{grid-template-columns:1fr}.achievements{grid-template-columns:repeat(2,1fr)}.links{gap:14px}.links .hide-mobile{display:none}}
+    @media(max-width:540px){.wrap{width:min(100% - 32px,1120px)}.nav-inner{height:66px}.links{gap:13px;font-size:12px}.nav-cta{padding:7px 10px}.hero{padding:72px 0 68px;min-height:auto}h1{font-size:clamp(43px,12vw,60px)}.lead{font-size:16px}.terminal{transform:none}.terminal-body{padding:18px;font-size:12px}.stats,.achievements{grid-template-columns:1fr}.stat{padding:17px 20px}section{padding-top:82px}.card{padding:24px}.card-top{flex-wrap:wrap}.architecture{gap:16px}.diagram{padding:26px 10px}.nodes .node{font-size:11px;padding:10px 7px}.footer{flex-direction:column;align-items:flex-start}.contact{margin-top:85px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top" aria-label="Harsh Dalai home">harsh<span>.</span></a>
+      <div class="links">
+        <a class="hide-mobile" href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a class="nav-cta" href="#contact">Let's talk ↗</a>
+      </div>
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+  </nav>
+  <main id="top">
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <span class="eyebrow"><span class="dot"></span> Software Engineer at Microsoft</span>
+          <h1>Building systems<br><em class="gradient">that scale.</em></h1>
+          <p class="lead">Hey, I'm <strong style="color:#f1f6ff">Harsh Dalai</strong> — a software engineer working at the intersection of backend engineering, cloud infrastructure and distributed systems. I love turning complex problems into reliable products.</p>
+          <div class="actions">
+            <a class="btn primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
+            <a class="btn" href="#ask">Ask about my experience ✦</a>
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener noreferrer" title="Existing resume PDF — may need updating">Resume ↗</a>
+          </div>
+        </div>
+        <div class="hero-side" aria-label="Developer profile terminal">
+          <div class="terminal">
+            <div class="terminal-head"><span class="lamp"></span><span class="lamp"></span><span class="lamp"></span><small>harsh@portfolio ~ %</small></div>
+            <div class="terminal-body">
+              <div><span class="prompt">➜</span> <span class="cmd">whoami</span></div>
+              <div class="answer">Harsh Dalai · Software Engineer</div>
+              <div style="margin-top:12px"><span class="prompt">➜</span> <span class="cmd">cat focus.json</span></div>
+              <div>{</div>
+              <div>&nbsp; "focus": <span class="value">"Distributed Systems"</span>,</div>
+              <div>&nbsp; "cloud": <span class="value">"Azure"</span>,</div>
+              <div>&nbsp; "languages": <span class="value">["C#", "C++"]</span>,</div>
+              <div>&nbsp; "mindset": <span class="value">"Build. Learn. Scale."</span></div>
+              <div>}</div>
+              <div style="margin-top:12px"><span class="prompt">➜</span> <span class="cursor" aria-hidden="true"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stats" aria-label="Career highlights">
+        <div class="stat"><strong>5+ years</strong><span>Engineering experience</span></div>
+        <div class="stat"><strong>10K+</strong><span>Tenants migrated at scale</span></div>
+        <div class="stat"><strong>2 → 10</strong><span>Regional scale units expanded</span></div>
+      </div>
+    </div>
+    <section id="about">
+      <div class="wrap">
+        <p class="section-kicker">01 / About</p>
+        <h2>Engineer by craft.<br><span class="gradient">Builder by instinct.</span></h2>
+        <p class="section-intro">I work on high-scale cloud services and products, with a background spanning backend platforms, full-stack applications, infrastructure migrations and operational reliability. I care about clean abstractions, measurable impact and systems that hold up in production.</p>
+        <div class="experience">
+          <article class="card reveal">
+            <div class="card-top"><div class="company">Microsoft</div><span class="pill">Current</span></div>
+            <h3>Software Engineer II</h3><div class="date">Aug 2025 — Present</div>
+            <p>Building and improving cloud-backed enterprise device management experiences and infrastructure. Contributions include tenant migrations, .NET update rollout, feature reporting and service reliability.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><div class="company">Siemens Healthineers</div><span class="pill">Previous</span></div>
+            <h3>Software Engineer</h3><div class="date">Aug 2021 — Aug 2025</div>
+            <p>Built software across medical imaging workflows, backend integrations and developer infrastructure. Worked on Linux/.NET modernization, CI/CD, monitoring and full-stack user experiences.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="work">
+      <div class="wrap">
+        <p class="section-kicker">02 / Selected impact</p>
+        <h2>Real systems. <span class="gradient">Real scale.</span></h2>
+        <p class="section-intro">A few highlights from my professional work. Descriptions intentionally remain high-level and exclude proprietary architecture and customer information.</p>
+        <div class="achievements">
+          <article class="card achievement reveal"><div class="iconbox" aria-hidden="true">↗</div><div><div class="number">10K+</div><h3>Tenant migrations</h3><p>Contributed to platform scale-out from 2 to 10 regional scale units, migrating more than 10,000 tenants.</p></div></article>
+          <article class="card achievement reveal"><div class="iconbox" aria-hidden="true">◈</div><div><div class="number">.NET</div><h3>Update rollout</h3><p>Helped deliver and roll out a .NET update offering for Windows devices across enterprise tenants.</p></div></article>
+          <article class="card achievement reveal"><div class="iconbox" aria-hidden="true">⌁</div><div><div class="number">99.9%</div><h3>Operational reliability</h3><p>Worked with observability, incident response and reliability improvements on production services.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="stack">
+      <div class="wrap architecture">
+        <div>
+          <p class="section-kicker">03 / How I think</p>
+          <h2>Design for <span class="gradient">resilience.</span></h2>
+          <p class="section-intro">I enjoy thinking through the lifecycle of a request: how traffic flows, where state lives, what breaks under pressure and how the system recovers. This is an illustrative reference architecture, not a diagram of any employer's systems.</p>
+          <div class="chips" aria-label="Technologies">
+            <span class="chip">C# / .NET</span><span class="chip">C++</span><span class="chip">Azure</span><span class="chip">Service Fabric</span><span class="chip">Redis</span><span class="chip">Kafka</span><span class="chip">React</span><span class="chip">SQL</span><span class="chip">Docker</span><span class="chip">Monitoring</span>
+          </div>
+        </div>
+        <div class="card diagram reveal" aria-label="Illustrative distributed system flow: clients to API gateway to services and data layers">
+          <div class="node">Clients / Devices</div><div class="connector"></div>
+          <div class="node big">API Gateway</div><div class="connector"></div>
+          <div class="nodes"><div class="node">Service A</div><div class="node">Service B</div><div class="node">Workers</div></div>
+          <div class="connector"></div>
+          <div class="nodes"><div class="node">Database</div><div class="node">Cache</div><div class="node">Queue</div></div>
+          <p class="note">Conceptual example · Scalability · Fault tolerance · Observability</p>
+        </div>
+      </div>
+    </section>
+    <section id="ask">
+      <div class="wrap guide">
+        <div>
+          <p class="section-kicker">04 / Interactive portfolio guide</p>
+          <h2>Curious about <span class="gradient">my work?</span></h2>
+          <p class="section-intro">Explore my background conversationally. Try asking about Microsoft, Siemens, distributed systems or technologies I use.</p>
+          <p class="caption">This is a privacy-friendly, on-device portfolio Q&A demo, not a generative AI model. A real LLM integration would require a secured backend.</p>
+        </div>
+        <div class="card chat reveal" aria-label="Interactive portfolio guide">
+          <div class="chat-title"><span class="iconbox" style="width:33px;height:33px;font-size:17px" aria-hidden="true">✦</span><div>Ask about Harsh<small>Portfolio knowledge guide · No data sent to a server</small></div></div>
+          <div class="chat-log" id="chatLog" role="log" aria-live="polite"><div class="bubble bot">Hi! Ask me about Harsh's engineering experience, projects or tech stack. What would you like to know?</div></div>
+          <div class="suggestions"><button type="button" data-question="What did you build at Microsoft?">Microsoft work</button><button type="button" data-question="What is your tech stack?">Tech stack</button><button type="button" data-question="Tell me about Siemens">Siemens</button></div>
+          <form class="chat-form" id="chatForm"><input id="chatInput" aria-label="Your question" placeholder="Ask a question..." maxlength="250" autocomplete="off" required><button type="submit">Send ↗</button></form>
+        </div>
+      </div>
+    </section>
+    <div class="wrap">
+      <section class="contact" id="contact">
+        <p class="section-kicker">05 / Let's connect</p>
+        <h2>Let's build something <span class="gradient">meaningful.</span></h2>
+        <p>Interested in backend engineering, distributed systems, cloud platforms or just exchanging ideas? I'd love to connect.</p>
+        <div class="actions"><a class="btn primary" href="https://www.linkedin.com/search/results/people/?keywords=Harsh%20Dalai" target="_blank" rel="noopener noreferrer">Find me on LinkedIn ↗</a><a class="btn" href="https://github.com/harshnsdalai" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      </section>
+      <footer class="footer"><div>© <span id="year">2026</span> Harsh Dalai. Designed & built with curiosity.</div><div class="footer-links"><a href="https://github.com/harshnsdalai" target="_blank" rel="noopener noreferrer">GitHub</a><a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a><a href="#top">Back to top ↑</a></div></footer>
+    </div>
+  </main>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    var observer = "IntersectionObserver" in window ? new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}});},{threshold:.08}) : null;
+    document.querySelectorAll(".reveal").forEach(function(el){if(observer){observer.observe(el);}else{el.classList.add("visible");}});
+    var log=document.getElementById("chatLog"),form=document.getElementById("chatForm"),input=document.getElementById("chatInput");
+    function responseFor(q){
+      var s=q.toLowerCase();
+      if(/microsoft|autopatch|tenant|window|scale|update/.test(s))return "At Microsoft, Harsh has worked on enterprise cloud infrastructure and device-management experiences. Highlights include migration of 10,000+ tenants during regional scale-out, .NET update rollout, feature reporting and production reliability work.";
+      if(/siemens|health|medical|imaging/.test(s))return "At Siemens Healthineers (2021–2025), Harsh developed backend and full-stack software for medical imaging workflows. His work included .NET modernization, Windows-to-Linux migrations, CI/CD pipelines, observability and UI engineering.";
+      if(/stack|tech|language|skill|framework|tools|azure|java|c#|react|kafka|redis/.test(s))return "Harsh works primarily with C#, .NET, C++, Azure, Service Fabric, Redis, Kafka, SQL, React and related cloud/devops tooling. He's especially interested in distributed systems and backend architecture.";
+      if(/system|architect|distributed|scale|reliab|design|backend/.test(s))return "Harsh focuses on scalable backend services, reliability and cloud infrastructure. His experience includes tenant-scale migrations, operational incident response and modernization of production services.";
+      if(/contact|reach|connect|hire|linkedin|github|resume/.test(s))return "You can find Harsh at github.com/harshnsdalai or follow the LinkedIn link in the Contact section. The current resume PDF is linked in the page navigation.";
+      if(/experience|career|about|who|education|college/.test(s))return "Harsh is a Software Engineer II at Microsoft, previously a software engineer at Siemens Healthineers. He studied Information Technology at NIT Raipur and has more than five years of professional engineering experience.";
+      return "I can help with Harsh's Microsoft work, Siemens experience, backend/distributed systems background, technology stack and contact details. Try one of those topics!";
+    }
+    function appendMessage(role,text){var bubble=document.createElement("div");bubble.className="bubble "+role;bubble.textContent=text;log.appendChild(bubble);log.scrollTop=log.scrollHeight;}
+    function ask(q){var message=q.trim().slice(0,250);if(!message)return;appendMessage("user",message);appendMessage("bot",responseFor(message));}
+    form.addEventListener("submit",function(event){event.preventDefault();ask(input.value);input.value="";input.focus();});
+    document.querySelectorAll("[data-question]").forEach(function(button){button.addEventListener("click",function(){ask(button.getAttribute("data-question"));});});
+  </script>
+</body>
 </html>
